@@ -129,7 +129,7 @@ input, select {
     margin-bottom:40px;
 }
 .menu_container{
-    width: 70%;
+    width: 50%;
     height: 60px;
     float: left;
     display: flex;
@@ -137,11 +137,12 @@ input, select {
     justify-content: center;
     list-style: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--color_red);
+    letter-spacing: 0.5px;
 }
 .menu_container li{
-    padding: 10px 10px;
+    padding: 10px 14px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -153,6 +154,7 @@ input, select {
     color: var(--color_white);
     align-items: center;
     border-bottom: 4px solid var(--color_white);
+    font-weight: 600;
 }
 .body_container{
     width: 100%;
@@ -205,7 +207,6 @@ input, select {
     background: linear-gradient(to right, #8a0303, #f85032);
     color: var(--color_white);
     font-size: 26px;
-    transition: all ease 0.4s;
     /* margin: 0px 10px 20px 10px; */
 }
 
@@ -222,4 +223,29 @@ input, select {
     padding:20px 50px;
     font-size: 16px;
     line-height: 24px;
+}
+.auth_section{
+    float: right;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+.btn_primary{
+    padding: 8px 12px;
+    border: 1px solid var(--color_red);
+    background:var(--color_white);
+    font-size: 16px;
+    color: var(--color_red);
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btn_primary:hover{
+    background: var(--color_red);
+    background: -webkit-linear-gradient(to right, #8a0303, #f85032);
+    background: linear-gradient(to right, #8a0303, #f85032);
+    color: var(--color_white);
+    border: none;
 }
