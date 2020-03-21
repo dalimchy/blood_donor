@@ -6,6 +6,7 @@
 :root {
   --color_red: #8a0303;
   --color_white: #FFFFFF;
+  --color_inactive: #d8d8d8;
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -127,6 +128,7 @@ input, select {
     height: calc(100vh - 100px);
     overflow-y: auto;
     margin-bottom:40px;
+    padding: 30px
 }
 .menu_container{
     width: 50%;
@@ -242,10 +244,146 @@ input, select {
     cursor: pointer;
     border-radius: 4px;
 }
+.btn_tiny{
+    background:var(--color_red);
+    font-size: 12px;
+    color: var(--color_white);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 14px;
+}
 .btn_primary:hover{
     background: var(--color_red);
     background: -webkit-linear-gradient(to right, #8a0303, #f85032);
     background: linear-gradient(to right, #8a0303, #f85032);
     color: var(--color_white);
     border: none;
+}
+
+.filter_options,
+.profiles_container
+{
+    width: 100%;
+    padding: 0px 30px;
+    float: left;
+}
+.filter_options ul li{
+    width: 40%;
+    float:left;
+    list-style: none; 
+    padding: 0px 16px;  
+}
+.filter_options ul li:last-child{
+    width: 20%;
+    margin-top: 40px;
+}
+.filter_options ul p{
+    font-size: 20px;
+    color:var(--color_red);
+    padding: 10px 0px;
+}
+.filter_options ul{
+    width: 100%;
+}
+.filter_options select,
+.filter_options input
+{
+    width: 100%;
+    height: 40px;
+    background: var(--color_white);
+    color:var(--color_red);
+    border: 1px solid var(--color_red);
+    outline: none;
+    border-radius:4px;
+    text-indent:6px;
+}
+.filter_options .btn_primary
+{
+    height: 38px;
+    text-align: center;
+    line-height: 22px;
+}
+.profiles_container{
+    display: flow-root;
+    margin: 0 auto;
+    margin-top: 40px;
+    /* box-shadow: 0 3px 14px 0 rgba(0,0,0,.2); */
+}
+
+.donor_profile{
+    width: calc(33.33% - 20px);
+    height: 200px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    float: left;
+    margin: 10px 10px;
+    border-radius: 14px;
+    color: var(--color_red);
+    box-shadow: 0 3px 14px 0 rgba(0,0,0,.2);
+    position: relative;
+}
+.donor_profile .donor_img{
+    width: 150px;
+    border-right: 2px solid var(--color_inactive);
+    float: left;
+    height: 200px;
+}
+.donor_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 14px;
+}
+.donor_profile .donor_details{
+    width: calc(100% - 150px);
+    padding: 15px 10px;
+    height: 200px;
+    float: right;
+}
+.donor_profile .btn_tiny{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 4px;
+}
+.donor_details .donor_name{
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+    float: left;
+}
+.donor_details .donor_{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    width: 100%;
+    float: left;
+}
+.donor_details .donor_.location,
+.donor_details .donor_.phone
+{
+    color:green;
+}
+.donor_details .social_icons{
+    width: 100%;
+    float: left;
+    margin-top: 4px;
+}
+.social_icons .icon_{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    border-radius: 4px;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+.phone_call{
+    color:green;
 }
